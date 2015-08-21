@@ -1,0 +1,30 @@
+set tabstop=4                   " number of spaces that a <Tab> in the file counts for
+set shiftwidth=4                " number of spaces to use for each step of (auto)indent
+set autoindent                  " copy indent from current line when starting a new line
+set expandtab                   " use the appropriate number of spaces to insert a <Tab>
+set shiftround
+set number                      " show line numbers
+set nowrap
+set showmatch                   " show matching bracket
+set hlsearch                    " highlight all matches of a previous search pattern
+set incsearch                   " while typing a search command, show where the pattern matches so far
+set wildmode=list:longest,full  " tab completes as expected in command mode
+set ignorecase                  " case insensitive search
+set smartcase                   " case sensitive when upper case present in search
+set scrolljump=5                " lines to scroll when cursor leaves screen
+set scrolloff=3                 " minimum lines to keep above and below cursor
+set ruler                       " show line and column number of cursor position
+set mouse=a                     " allow mouse use
+set noerrorbells visualbell t_vb=
+set guifont=Consolas:h10
+autocmd GUIEnter * set visualbell t_vb=
+
+syntax on
+filetype plugin on
+
+highlight Comment      cterm=bold
+highlight ModeMsg      ctermfg=green "ctermbg=black      " set mode message ( --INSERT-- ) to green
+highlight StatusLine   ctermfg=white ctermbg=black      " set the active statusline to black on white
+highlight StatusLineNC ctermfg=grey  ctermbg=black      " set inactive statusline to black on grey
+
+match TODO /\s\+$/              " highlights trailing whitespace with the ugly 'TODO' color

@@ -1,0 +1,16 @@
+[user]
+	name = Logan Sales
+	email = logar56@gmail.com
+[core]
+	editor = vim
+	excludesfile = /home/lsales/.gitignore_global
+[merge]
+	tool = vimdif
+[credential]
+	helper = cache --timeout=3600
+[color]
+	ui = true
+[push]
+	default = simple
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
