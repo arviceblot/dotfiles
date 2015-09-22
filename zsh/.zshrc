@@ -39,5 +39,5 @@ alias copy='xclip -sel clip <'
 export EDITOR="vim"
 
 # prompt
-PROMPT="%{$fg[green]%}%n%{$reset_color%} at %{$fg[blue]%}%m%{$reset_color%} in %{$fg_no_bold[yellow]%}%1~
+PROMPT="%{$fg[green]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%}:%{$fg_no_bold[yellow]%}%1~
 %{$reset_color%}%# "
