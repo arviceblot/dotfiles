@@ -38,6 +38,11 @@ alias copy='xclip -sel clip <'
 # exports
 export EDITOR="vim"
 
+# git stuff
+. ~/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+
 # prompt
-PROMPT="%{$fg[green]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%}:%{$fg_no_bold[yellow]%}%1~
+setopt prompt_subst
+PROMPT="%{$fg[green]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%}:%{$fg_no_bold[yellow]%}%1~%{$reset_color%}%{$(__git_ps1 " (%s)")%}
 %{$reset_color%}%# "
