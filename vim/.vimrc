@@ -26,6 +26,7 @@ set noswapfile
 set laststatus=2
 set grepprg=grep\ -nH\ $*n      " added for vim-latexsuite
 "set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after " added for vim-latexsuite
+set nocompatible                " needed for pencil
 
 let g:tex_flavor = "latex"      " added for vim-latexsuite
 
@@ -39,9 +40,16 @@ match TODO /\s\+$/              " highlights trailing whitespace with the ugly '
 call plug#begin('~/.vim/plugged')
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-fugitive'
+Plug 'reedes/vim-pencil'
 " on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
+
+augroup pencil
+    autocmd!
+    autocmd FileType markdown,mkd call pencil#init()
+    autocmd FileType text         call pencil#init()
+augroup END
 
 " statusline
 set statusline=%<[%n]\ %f\ [%M%R%H%W%Y][%{&ff}][%{fugitive#statusline()}]%=%l/%L,%c\ %p%%
