@@ -96,6 +96,10 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias tree='tree -C'
+alias vi='vim'
+alias view='vim -R'
+alias lsd='ls -d */'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -130,3 +134,11 @@ bind 'TAB:menu-complete'
 
 # auto cd
 shopt -s autocd
+
+export VISUAL="vim"
+
+PATH="/home/lsales/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/home/lsales/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/lsales/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/lsales/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/lsales/perl5"; export PERL_MM_OPT;
