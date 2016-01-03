@@ -31,6 +31,7 @@ set nocompatible                " needed for pencil
 let g:tex_flavor = "latex"      " added for vim-latexsuite
 
 set laststatus=2                " needed for vim-airline without split
+let g:airline#extensions#tabline#enabled = 1
 
 syntax on
 filetype plugin on
@@ -44,6 +45,7 @@ Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
 Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-fugitive'
+Plug 'Townk/vim-autoclose'
 Plug 'vim-scripts/a.vim'
 " on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -55,5 +57,3 @@ augroup pencil
     autocmd FileType text         call pencil#init()
 augroup END
 
-" statusline
-set statusline=%<[%n]\ %f\ [%M%R%H%W%Y][%{&ff}][%{fugitive#statusline()}]%=%l/%L,%c\ %p%%
