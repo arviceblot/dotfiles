@@ -30,6 +30,8 @@ set nocompatible                " needed for pencil
 
 let g:tex_flavor = "latex"      " added for vim-latexsuite
 
+set laststatus=2                " needed for vim-airline without split
+
 syntax on
 filetype plugin on
 filetype indent on
@@ -38,9 +40,11 @@ match TODO /\s\+$/              " highlights trailing whitespace with the ugly '
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
 Plug 'ervandew/supertab'
-Plug 'tpope/vim-fugitive'
 Plug 'reedes/vim-pencil'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/a.vim'
 " on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
