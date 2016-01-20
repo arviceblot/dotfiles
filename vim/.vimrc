@@ -23,15 +23,15 @@ set nobackup
 set nowb
 set noswapfile
 " always show status line
-set laststatus=2
+set laststatus=2                " needed for vim-airline without split
 set grepprg=grep\ -nH\ $*n      " added for vim-latexsuite
 "set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after " added for vim-latexsuite
 set nocompatible                " needed for pencil
 
 let g:tex_flavor = "latex"      " added for vim-latexsuite
 
-set laststatus=2                " needed for vim-airline without split
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='term'
 
 syntax on
 filetype plugin on
@@ -41,12 +41,13 @@ match TODO /\s\+$/              " highlights trailing whitespace with the ugly '
 
 " vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'bling/vim-airline'
-Plug 'ervandew/supertab'
-Plug 'reedes/vim-pencil'
-Plug 'tpope/vim-fugitive'
-Plug 'Townk/vim-autoclose'
 Plug 'vim-scripts/a.vim'
+Plug 'bling/vim-airline'
+Plug 'Townk/vim-autoclose'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
+Plug 'reedes/vim-pencil'
+Plug 'ervandew/supertab'
 " on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()
