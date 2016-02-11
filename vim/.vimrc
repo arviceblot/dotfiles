@@ -22,6 +22,9 @@ endif
 set nobackup
 set nowb
 set noswapfile
+set noerrorbells visualbell t_vb=
+set guifont=Consolas:h10
+autocmd GUIEnter * set visualbell t_vb=
 " always show status line
 set laststatus=2                " needed for vim-airline without split
 set grepprg=grep\ -nH\ $*n      " added for vim-latexsuite
@@ -42,7 +45,8 @@ match TODO /\s\+$/              " highlights trailing whitespace with the ugly '
 " vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'vim-scripts/a.vim'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
