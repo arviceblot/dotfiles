@@ -23,7 +23,7 @@ set nobackup
 set nowb
 set noswapfile
 set noerrorbells visualbell t_vb=
-set guifont=Consolas:h10
+set guifont=Ubuntu\ Mono\ 12
 autocmd GUIEnter * set visualbell t_vb=
 " always show status line
 set laststatus=2                " needed for vim-airline without split
@@ -35,6 +35,8 @@ let g:tex_flavor = "latex"      " added for vim-latexsuite
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='term'
+
+autocmd BufWritePost *.tex Dispatch! latexmk -pdf
 
 syntax on
 filetype plugin on
@@ -48,6 +50,7 @@ Plug 'vim-scripts/a.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Townk/vim-autoclose'
+Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'reedes/vim-pencil'
