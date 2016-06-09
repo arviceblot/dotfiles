@@ -36,6 +36,8 @@ let g:tex_flavor = "latex"      " added for vim-latexsuite
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='term'
 
+let g:languagetool_jar = "~/LanguageTool-3.3/languagetool-commandline.jar"
+
 autocmd BufWritePost *.tex Dispatch! latexmk -pdf
 
 syntax on
@@ -52,6 +54,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/LanguageTool'
 Plug 'scrooloose/nerdcommenter'
 Plug 'reedes/vim-pencil'
 Plug 'ervandew/supertab'
