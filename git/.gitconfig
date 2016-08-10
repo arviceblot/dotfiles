@@ -1,9 +1,9 @@
 [user]
 	name = Logan Sales
-	email = logar56@gmail.com
+	email = loganmsales@gmail.com
 [core]
 	editor = vim
-	excludesfile = /home/lsales/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [merge]
 	tool = vimdif
 [credential]

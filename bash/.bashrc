@@ -65,9 +65,9 @@ fi
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\e[0;32m\]\u\[\033[00m\]@\[\e[0;34m\]\h\[\033[00m\]:\[\e[0;33m\]\W\[\033[00m\]$(__git_ps1 " (%s)")\n\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[0;32m\]\u\[\033[00m\]@\[\e[0;34m\]\h\[\033[00m\]:\[\e[0;33m\]\W\[\033[00m\]$(__git_ps1 " (%s)")\n> '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\n\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\n> '
 fi
 unset color_prompt force_color_prompt
 
@@ -136,9 +136,3 @@ bind 'TAB:menu-complete'
 shopt -s autocd
 
 export VISUAL="vim"
-
-PATH="/home/lsales/perl5/bin${PATH+:}${PATH}"; export PATH;
-PERL5LIB="/home/lsales/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/lsales/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/lsales/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/lsales/perl5"; export PERL_MM_OPT;

@@ -36,9 +36,9 @@ let g:tex_flavor = "latex"      " added for vim-latexsuite
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='term'
 
-let g:languagetool_jar = "~/LanguageTool-3.3/languagetool-commandline.jar"
+let g:languagetool_jar = "~/LanguageTool/languagetool-commandline.jar"
 
-autocmd BufWritePost *.tex Dispatch! latexmk -pdf
+"autocmd BufWritePost *.tex Dispatch! latexmk -pdf
 
 syntax on
 filetype plugin on
@@ -64,7 +64,7 @@ call plug#end()
 
 augroup pencil
     autocmd!
-    autocmd FileType markdown,mkd call pencil#init()
     autocmd FileType text         call pencil#init()
+    autocmd FileType latex,tex    call pencil#init()
 augroup END
 
