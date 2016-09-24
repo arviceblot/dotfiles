@@ -50,8 +50,8 @@ steam
 
 TMPDIR=/tmp/newinstall
 mkdir -p $TMPDIR
-wget -c -O $TMPDIR/chrome.deb https://dl.google.com/linux/direct/${debs[0]}.deb
-wget -c -O $TMPDIR/steam.deb https://steamcdn-a.akamaihd.net/client/installer/${debs[1]}.deb
+wget -c -O $TMPDIR https://dl.google.com/linux/direct/${debs[0]}.deb
+wget -c -O $TMPDIR https://steamcdn-a.akamaihd.net/client/installer/${debs[1]}.deb
 
 #sudo add-apt-repository -y ppa:kilian/f.lux
 sudo dpkg -i $TMPDIR/${debs[@]}.deb
