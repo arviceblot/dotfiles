@@ -43,13 +43,18 @@ xorg-dev
 #zsh
 )
 
+debs=(
+google-chrome-stable_current_amd64
+steam
+)
+
 TMPDIR=/tmp/newinstall
 mkdir -p $TMPDIR
-wget -c -O $TMPDIR/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-wget -c -O $TMPDIR/steam.deb https://steamcdn-a.akamaihd.net/client/installer/steam.deb
+wget -c -O $TMPDIR/chrome.deb https://dl.google.com/linux/direct/${debs[0]}.deb
+wget -c -O $TMPDIR/steam.deb https://steamcdn-a.akamaihd.net/client/installer/${debs[1]}.deb
 
 #sudo add-apt-repository -y ppa:kilian/f.lux
-sudo dpkg -i $TMPDIR/*.deb
+sudo dpkg -i $TMPDIR/${debs[@]}.deb
 sudo apt-get install -fy
 sudo apt-get update
 sudo apt-get dist-upgrade -y
