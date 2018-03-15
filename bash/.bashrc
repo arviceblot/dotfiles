@@ -137,3 +137,7 @@ shopt -s autocd
 
 export VISUAL="vim"
 export PATH=~/pebble-dev/pebble-sdk-4.5-linux64/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

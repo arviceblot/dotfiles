@@ -14,6 +14,7 @@ set ignorecase                  " case insensitive search
 set smartcase                   " case sensitive when upper case present in search
 set scrolljump=5                " lines to scroll when cursor leaves screen
 set scrolloff=3                 " minimum lines to keep above and below cursor
+set cursorline                  " underline current line
 set ruler                       " show line and column number of cursor position
 if has('mouse')
     set mouse=a                 " allow mouse use if there is one
@@ -47,10 +48,10 @@ hi SpellBad cterm=underline,bold ctermfg=red
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 " autoformat settings
 au BufWrite * :Autoformat
@@ -80,10 +81,14 @@ Plug 'Chiel92/vim-autoformat'           " autoformat files
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'               " git
 Plug 'vim-scripts/LanguageTool'         " grammar checking
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'             " syntax checking
+"Plug 'scrooloose/nerdcommenter'
+"Plug 'scrooloose/syntastic'             " syntax checking
 Plug 'reedes/vim-pencil'                " nice writing and wrapping tools
-Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+"Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
+Plug 'tpope/vim-commentary'             " comment stuff out
+Plug 'tpope/vim-dadbod'                 " interact with databases
+Plug 'w0rp/ale'                         " async lint engine
+Plug 'sheerun/vim-polyglot'             " a solid language pack
 " on-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 call plug#end()

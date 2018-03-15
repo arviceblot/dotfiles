@@ -1,16 +1,16 @@
 [user]
-	name = Logan Sales
-	email = loganmsales@gmail.com
+    name = Logan Sales
+    email = github@arviceblot.com
 [core]
-	editor = vim
-	excludesfile = ~/.gitignore_global
+    editor = vim
+    excludesfile = ~/.gitignore_global
 [merge]
-	tool = vimdif
+    tool = vimdiff
 [credential]
-	helper = cache --timeout=3600
+    helper = cache --timeout=3600
 [color]
-	ui = true
+    ui = true
 [push]
-	default = simple
+    default = simple
 [alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
