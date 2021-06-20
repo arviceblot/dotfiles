@@ -2,50 +2,50 @@
 set -x
 
 packagelist=(
-biber
-build-essential
-cmake
-cmake-curses-gui
-default-jdk
-exfat-utils
-exfat-fuse
-filezilla
-#fluxgui
-gimp
-git
-htop
-libboost-all-dev
-libglew-dev
-libglfw-dev
-libglm-dev
-libpng++-dev
-libreoffice
-libsfml-dev
-libxi-dev
-monodevelop
-#nautilus-dropbox
-#nautilus-open-terminal
-redshift-gtk
-stow
-subversion
-texlive-fonts-recommended
-texlive-latex-extra
-texlive-xetex
-ttf-mscorefonts-installer
-tmux
-tree
-ubuntu-restricted-extras
-vim
-vim-gnome
-#vlc
-xclip
-xorg-dev
-#zsh
+    biber
+    build-essential
+    cmake
+    cmake-curses-gui
+    default-jdk
+    exfat-utils
+    exfat-fuse
+    filezilla
+    #fluxgui
+    gimp
+    git
+    htop
+    libboost-all-dev
+    libglew-dev
+    libglfw-dev
+    libglm-dev
+    libpng++-dev
+    libreoffice
+    libsfml-dev
+    libxi-dev
+    monodevelop
+    #nautilus-dropbox
+    #nautilus-open-terminal
+    redshift-gtk
+    stow
+    subversion
+    texlive-fonts-recommended
+    texlive-latex-extra
+    texlive-xetex
+    ttf-mscorefonts-installer
+    tmux
+    tree
+    ubuntu-restricted-extras
+    vim
+    vim-gnome
+    #vlc
+    xclip
+    xorg-dev
+    #zsh
 )
 
 debs=(
-google-chrome-stable_current_amd64
-steam
+    google-chrome-stable_current_amd64
+    steam
 )
 
 TMPDIR=/tmp/newinstall
@@ -67,4 +67,5 @@ stow -t ~ git
 stow -t ~ vim
 stow -t ~ bash
 stow -t ~ tmux
+stow -t ~ zsh
 #chsh -s /usr/bin/zsh
