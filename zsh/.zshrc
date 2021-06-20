@@ -1,5 +1,5 @@
 # autostart tmux
-if [ "$TMUX" = "" ]; then tmux; fi
+#if [ "$TMUX" = "" ]; then tmux; fi
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -27,8 +27,12 @@ elif [[ -s '/etc/zsh_command_not_found' ]]; then
     source /etc/zsh_command_not_found
 fi
 
+# add autocomplete
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # aliases
 alias ls='ls --color=auto'
+alias ll='ls -l'
 alias tree='tree -C'
 alias vi='vim'
 alias view='vim -R'
@@ -37,17 +41,21 @@ alias copy='xclip -sel clip <'
 
 # exports
 export EDITOR="vim"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # git stuff
 #. ~/git-prompt.sh
 #export GIT_PS1_SHOWDIRTYSTATE=1
 
-autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
+#autoload -Uz vcs_info
+#precmd_vcs_info() { vcs_info }
+#precmd_functions+=( precmd_vcs_info )
 
 # prompt
-setopt prompt_subst
-PROMPT="%{$fg[green]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%}:%{$fg_no_bold[yellow]%}%1~%{$reset_color%} \$vcs_info_msg_0_
-%{$reset_color%}%# "
-zstyle ':vcs_info:git:*' formats '%b'
+#setopt prompt_subst
+#PROMPT="%{$fg[green]%}%n%{$reset_color%}@%{$fg[blue]%}%m%{$reset_color%}:%{$fg_no_bold[yellow]%}%1~%{$reset_color%} \$vcs_info_msg_0_
+#%{$reset_color%}%# "
+#zstyle ':vcs_info:git:*' formats '%b'
+
+# starship prompt
+eval "$(starship init zsh)"
